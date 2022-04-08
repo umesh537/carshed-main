@@ -1,0 +1,65 @@
+{% extends 'base.html'   %}
+
+{% block title %}Schedule Rake{% endblock title%}
+{% block  body %} 
+
+
+<head>
+    <!-- <style>
+         body {
+            background-image: url(/static/images/mumbailocal.jpg);
+        } 
+    </style> -->
+    <!-- <link rel="stylesheet" href="/static/css/table/tables.css"> -->
+    <link rel="stylesheet" href="/static/css/table/upload.css">
+    <link rel="stylesheet" href="/static/css/table/tables.css">
+</head>
+
+<body>
+    <!-- <h1 class="bg-light text-dark text-center">This is the  update Schedule Date</h1> -->
+    <div class="upload">
+        <div class="box-input">
+        <i class="fas fa-fighter-jet"></i>
+       <br>
+        <i class="fas fa-cloud"></i>
+        <label for="file"><strong>Click Here & Choose a file</strong>
+            <span class="box-dragndrop"> or drag it here</span>.</label>
+        <!-- <a href="{% url 'upload_pdf' %}" class="btn btn-primary ">Upload PDF</a> -->
+        <button type="submit" class="button">
+            <a href="{% url 'schedule_upload' %}" class="button">
+            Upload PDF</a></button>
+        </div>  
+    </div>
+
+    <div class="table_responsive mt-5 mb-5">
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    <!-- <th>ID</th> -->
+                    <th>Rake Type</th>
+                    <th>Schedule At</th>
+                    <th>Shift</th>
+                    <th>Washing</th>
+                    <th>Mopping</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for file in data %}
+                <tr>
+                    <!-- <td>{{ file.id}}</td> -->
+                    <td>{{ file.rake_type}}</td>
+                    <td>{{ file.schedule_at}}</td>
+                    <td>{{ file.shift}}</td>   
+                    <td>{{ file.washing}}</td>   
+                    <td>{{ file.mopping}}</td>   
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script src="/static/js/upload.js"></script>
+    <!-- <link rel="stylesheet" href="/static/css/table/tables.css"> -->
+</body>
+
+{% endblock body%}
+

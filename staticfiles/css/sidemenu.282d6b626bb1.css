@@ -1,0 +1,61 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+/* .sidemenu{
+
+} */
+
+
+
+.rounded {
+  text-decoration: none;
+  /* border-radius: 0.25rem!important; */
+}
+
+.link-dark {
+  margin-left: 20px;
+  /* color: #212529; */
+  
+}
+.sidebar{
+  background-color: #933ded;
+  color: whitesmoke;
+  height: 100vh;
+  /* border: 2px solid whitesmoke; */
+  border-radius: 7px;
+  
+}
+
+.link-dark {
+  margin-left: 20px;
+  color: whitesmoke;
+}
+
+.btn:hover {
+  color: whitesmoke;
+}
+
+.btn{
+  color: whitesmoke;
+}
+
+
+a:link {
+  color: whitesmoke;
+}
+
+/* visited link */
+a:visited {
+  color: whitesmoke;
+}
+
+/* mouse over link */
+/* a:hover {
+  color: black;
+} */
+
+/* selected link */
+.menu-link{
+  text-decoration: none;
+}

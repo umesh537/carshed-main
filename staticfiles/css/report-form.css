@@ -1,0 +1,67 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+.centeral-railway-heading {
+    margin-left: 170px;
+}
+.carshed-heading{
+    margin-left: 180px;
+}
+
+.form-auto-date{
+    margin-left: 100px;
+}
+
+
+body{
+  color: #333;
+  background: #ebf8ff;
+  font: 16px/1.6 "Roboto", sans-serif;
+  min-width: 40px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400; 
+}
+
+.container{
+  color: #07abff; 
+  background: #fff;
+  padding: 50px;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
+  /* width: 950px; */
+}
+.buttoncolor{
+  background-color:#07abff ;
+  color: whitesmoke;
+  /* color: #07abff;  */
+}
+
+.form-control2 {
+  margin-left: 60px;
+}
+.form-control3 {
+  margin-left: 120px;
+}
+
+.form-controlxy1{
+  margin-left: 60px;
+}
+.form-controlxy2{
+  margin-left: 110px;
+}
+.form-controlxy3{
+  margin-left: 0px;
+}
+.form-controlxy4{
+  margin-left: 50px;
+}

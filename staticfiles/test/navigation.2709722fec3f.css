@@ -1,0 +1,59 @@
+
+body{
+  overflow-x: hidden;
+
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.55);
+    font-size: 15px;
+  
+}
+.navbar{
+  width: 100%;
+    border-radius: 5px;
+    border: 2px solid whitesmoke;
+    background-color: #933ded ;
+    color: whitesmoke;
+    margin-top: -100px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: whitesmoke(0,0,0,.55);
+    font-size: 17px;
+    color: whitesmoke;
+}
+
+.nav-link{
+    color: whitesmoke;
+}
+
+.navbar-light .navbar-toggler {
+    background-color: whitesmoke;
+    color: rgb(255 255 255);
+    border-color: #933ded ;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  margin-left: -20px;
+  position: absolute;
+  background-color: #933ded;
+}
+.dropdown-item{
+    font-size: 14px;
+  
+}
+
+a:visited {
+    color: whitesmoke;
+  }
+  
+  /* mouse over link */
+ a:hover {
+    color: whitesmoke;
+  }
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute;
+    background-color: #933ded;
+}
+
+
+

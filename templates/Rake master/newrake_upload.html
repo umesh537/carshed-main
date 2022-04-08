@@ -1,0 +1,85 @@
+{% extends 'base.html'   %}
+
+{% block title %}login{% endblock title%}
+{% block  body %}
+
+
+<head>
+    <style>
+        /* body {
+            background-image: url(/static/images/mumbailocal.jpg);
+        } */
+    </style>
+    <link rel="stylesheet" href="/static/css/newrake.css">
+</head>
+
+<body>
+    <!-- <h1 class="bg-light text-dark text-center">This is the newrake upload</h1> -->
+    <div class="add-rake-body">
+        <div class="container mx-3 text-center">
+            <main class="add-rake-form text-center">
+                <div class="col-md-7 col-lg-8 ">
+                    <h4 class="mb-3 text-center">Add New Rake</h4>
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="row g-3 my-2 text-center">
+                            <div class="col">
+                                <label class="label" for="select_rake">SELECT RAKE TYPE</label>
+                                <select name="select_rake">
+                                    {% for rake in raketype %}
+                                    <option value="{{rake.0}}">{{rake.1}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="unit-number" class="form-label">Unit Number </label>
+                                <input type="text" name="unit_no" id="unit-number" placeholder="Unit Number" value=""
+                                    required>
+                            </div>
+                            <div class="row my-2 text-center">
+                                <div class="col">
+                                    <label for="country" class="form-label"> Coach Position </label>
+                                    <input type="integer" name="coach_position" id="coach_position"
+                                        placeholder="Coach Position">
+                                </div>
+                                <div class="col">
+                                    <label for="state" class="form-label">Coach Number</label>
+                                    <input type="integer" name="coach_no" id="coach_no" placeholder="Coach Number">
+                                </div>
+                            </div>
+                            <div class="row my-2 text-center">
+                                <div class="col">
+                                    <label for="country" class="form-label">Rake Id</label>
+                                    <select name="rake_id">
+                                        {% for rake in rake_id %}
+                                        <option value="{{rake.0}}">{{rake.1}}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="state" class="label">Make</label>
+                                    <select name="make">
+                                        {% for rake in make %}
+                                        <option value="{{rake.0}}">{{rake.1}}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="col mx-2">
+                                    <label for="state" class="form-label">Comm Date</label>
+                                    <input name="comm_date" type="date">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <hr class="my-4" style="width: 120%;">
+                        <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+                        <!-- <button class="w-100 btn btn-primary btn-lg" type="submit">Update</button> -->
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+
+{% endblock body%}

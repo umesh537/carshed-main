@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins',sans-serif;
+}
+body {
+   overflow-x: hidden;
+}
+
+.search-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+
+nav .search_box input{
+   border: none;
+   outline: none;
+   background: #fff;
+   height: 100%;
+   padding: 0 10px;
+   font-size: 20px;
+   width: 570px;
+   border: 2px solid #933ded;
+   border-radius: 7px;
+   margin-left: -50px;
+}
+
+
+.search-nav .search_box span{
+   margin-left: 6px;
+   color: whitesmoke;
+   font-size: 20px;
+   background: #933ded;
+   height: 100%;
+   padding: 8px;
+   position: relative;
+   cursor: pointer;
+   z-index: 1;
+   border-radius: 20px;
+}
+.search-nav .search_box span:hover{
+   color: #fff;
+}
+.search-nav .search_box span::after{
+ 
+border-radius: 50%;
+   height: 100%;
+   width: 0%;
+   content: '';
+   background: red;
+
+   position: absolute;
+   top: 0;
+   right: 0;
+   z-index: -1;
+   transition: 0.3s;
+}
+.search-nav .search_box span:hover::after{
+   width: 100%;
+}
+
+
+
+@media screen and (max-width: 1200px){
+
+  
+   .search-nav .search_box{
+      width: 100%;
+      display: inline-flex;
+      justify-content: center;
+      margin-bottom: 15px;
+   }
+   .search-nav .search_box input{
+      width: 74%;
+   }
+ 
+
+   .search-nav .bar{
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 80px;
+      cursor: pointer;
+   }
+   .search-nav .bar #times{
+      display: none;
+   }
+   #check:checked ~ .search-nav .bar #times{
+      display: block;
+   }
+   #check:checked ~ .search-nav .bar #bars{
+      display: none;
+   }
+   #check:checked ~ .search-nav .cr-ul{
+      visibility: visible;
+      height: 465px;
+   }
+
+   }
+
+
+
+
+.fa,
+.fas {
+  font-family: 'FontAwesome';
+}
+
+
+
+/* search container starts here  */
+.search-container{
+   margin-top: 20px;
+   /* margin-left: 30px; */
+}
+
+
+ /*---------------------------------------- search nav starts here ------------------------------ */
+
+/* .search-nav{
+   margin-left: 250px;
+} */

@@ -1,0 +1,68 @@
+{% extends 'base.html'   %}
+
+{% block title %}login{% endblock title%}
+{% block  body %} this is login body
+
+<head>
+    <style>
+        body {
+            background-image: url(/static/images/mumbailocal.jpg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form">
+            <i class="far fa-user-circle icon"></i>
+            <div class="btn">
+                <button class="signUpBtn">SIGN UP</button>
+            </div>
+            <form class="signUp" action="/register" method="POST">
+            {% csrf_token %}
+                <div class="formGroup">
+                    <input type="text" id="firstname" placeholder="First Name" name="firstname" autocomplete="off">
+                </div>
+                <div class="formGroup">
+                    <input type="text" id="lastname" placeholder="Last Name" name="lastname" autocomplete="off">
+                </div>
+                <div class="formGroup">
+                    <input type="text" id="username" placeholder="User Name" username="username" autocomplete="off">
+                </div>
+                <div class="formGroup">
+                    <input type="email" placeholder="Email ID" name="email" name="email" required autocomplete="off">
+                </div>
+                <div class="formGroup">
+                    <input type="password" id="password1" placeholder="Password" name="password1" required autocomplete="off">
+                </div>
+                {% comment %} <div class="formGroup">
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" name="password2" required
+                        autocomplete="off">
+                </div> {% endcomment %}
+                <div class="signin">
+                    <a href="login.html">Click Here To Login</a> </div>
+                <div class="checkBox">
+                    <a href="resetpass.html">Forgot Password</a>
+                </div>
+
+                <div class="formGroup">
+                    <button type="submit" class="btn2">REGISTER</button>
+                </div>
+            </form>
+
+            <ul class="nav justify-content-center footnav ">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">About Us </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Download Mobile App</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+{% endblock body%}

@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-image: url("/static/images/mumbailocal.7585017e171d.jpg"); */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-image: url("/static/images/mumbailocal.7585017e171d.jpg"); */
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+/* align items center vertically and horizontally  */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+    height: 100vh;
+}
+
+.form {
+    width: 350px;
+    height: 586px;
+    /* background-color: rgba(41, 39, 39, 0.3); */
+    /* background-color: rgba(36, 26, 26, 0.3); */
+    background-color: rgb(15 12 12 / 74%);
+    ;
+    box-shadow: 0 5px 30px black;
+    border: 2px solid whitesmoke;
+    border-radius: 7px;
+}
+
+.btn button {
+    padding: 3px;
+    /* margin: 30px 0px 40px 30px; */
+    margin: 17px 13px 9px 126px;
+    border-style: none;
+    background-color: transparent;
+    color: beige;
+    font-size: 18px;
+    font-weight: 550;
+}
+
+.formGroup {
+    display: flex;
+    justify-content: center;
+}
+
+.formGroup input {
+    border: none;
+    width: 80%;
+    border-bottom: 2px solid white;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: transparent;
+    color: white;
+}
+
+input:focus {
+    outline: none !important;
+    border-bottom: 2px solid rgb(91, 243, 131);
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+}
+
+::placeholder {
+    color: white;
+}
+
+.checkBox {
+    display: flex;
+    justify-content: center;
+    margin: 16px !important;
+}
+
+#checkbox {
+    margin-right: 10px;
+    height: 15px;
+    width: 15px;
+}
+
+.text {
+    color: rgb(199, 197, 197);
+    font-size: 13px;
+}
+
+.btn2 {
+    padding: 10px;
+    width: 150px;
+    border-radius: 20px;
+    background-color: rgb(10, 136, 43);
+    border-style: none;
+    color: white;
+    font-weight: 600;
+}
+
+.btn2:hover {
+    background-color: rgba(10, 136, 43, 0.5);
+}
+
+.btn button:hover {
+    border-bottom: 2px solid rgb(91, 243, 131);
+}
+
+/* hide signup form */
+/* .login{
+    display: none;
+  }
+    */
+/* Login form code */
+.login {
+    margin-top: 160px;
+}
+
+.login .checkBox {
+    margin-top: 30px !important;
+}
+
+.icon {
+    font-size: 100px;
+    margin-left: 120px;
+    margin-top: 10px;
+    background-color: aliceblue;
+    border-radius: 150px;
+
+}
+
+
+.header {
+    margin-left: 160px;
+    margin-right: 160px;
+    margin-top: 10px;
+    size: 50%;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(15 12 12 / 74%);
+    border-radius: 7px;
+    flex-wrap: wrap;
+}
+
+.date {
+    margin-left: 30px;
+    background-color: rgb(15 12 12 / 74%);
+    color: whitesmoke;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: rgb(12, 11, 11)
+}
+
+a:hover {
+    color: rgb(37, 35, 35)
+}
+
+a:active {
+    color: white
+}
+
+
+/* this the left column */
+.kcs .flex-container {
+    width: 40vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: normal;
+    align-items: stretch;  
+    align-content: normal;
+    height: 100vh;
+    margin-top: 50px;
+    background-color: #3d54fff0;
+    border-radius: 7px;
+    margin-left: 25px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.kcs .flex-container .flex-items:nth-child(1) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+}
+
+.kcs .flex-items .list {
+    text-decoration: none;
+    display: block;
+    margin-bottom: 20px;
+
+}
+
+.kcs .list-border {
+    border: 2px solid whitesmoke;
+    border-radius: 7px;
+}
+
+
+/* this is the footer */
+
+.footnav a:link {
+    color: white;
+}
+
+.footnav a:visited {
+    color: white
+}
+
+.footnav a:hover {
+    color: white
+}
+
+.footnav a:active {
+    color: white
+}
+
+
+
+.footnav {
+    font-size: 13px;
+    margin-left: -6%;
+    margin-right: -6%;
+    margin-top: 20vh;
+    margin-bottom: 6vh;
+    size: 20%;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(15 12 12 / 74%);
+
+}
+
+.fas {
+    font-size: 30px;
+    margin-right: 10px;
+    color:black;
+}
+.fa {
+    color: white;
+}
+
+.signin {
+    color: whitesmoke;
+    margin-left: 100px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: black;
+}
+
+
+@media screen and (min-width: 955px) {
+    /* .header{
+    margin-left: 76px;
+    margin-right: 19px;
+  } */
+
+    h3 {
+
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: 12px;
+        font-weight: bold;
+
+    }
+
+}
+
+@media screen and (min-width: 1155px) {
+    
+    h3{
+        background-color: hotpink;
+         margin-top: 0;
+         margin-bottom: 1rem;
+         font-size: 12px;
+         font-weight: bold;
+     
+    }
+ 
+   }
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    background-color: #933ded;
+    position: absolute;
+}

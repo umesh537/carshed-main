@@ -1,0 +1,147 @@
+{% extends 'base.html'   %}
+
+
+{% load crispy_forms_tags %}
+
+{% block title %}KCS Upload File{% endblock title%}
+{% block  body %}
+
+<head>
+    <style>
+        /* body {
+            background-image: url(/static/images/mumbailocal.jpg);
+        }  */
+    </style>
+    <link rel="stylesheet" href="/static/css/form.css">
+</head>
+
+<body>
+    <!-- <h1 class="bg-light text-dark text-center">This is the upload pdf</h1> -->
+    <div class="wrapper">
+        <div class="container">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <h2 class=" rake-header text-center">UPDATE SCHDULE DATE AND RAKES </h2>
+                <div class="row my-2">
+                    <label  class="label" for="select_rake">SELECT RAKE TYPE</label>
+                    <select name="select_rake" >
+                        {% for rake in raketype %}
+                        <option value="{{rake.0}}">{{rake.1}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="row my-2">
+                    <div class="col">
+                        <label class="label mx-3" for="be_dtc">BE DTC</label>
+                        <input  name="be_dtc" type="text" placeholder="BE DTC">
+                    </div>
+                    <div class="col">
+                        <div class="row my-2 ">
+                            <label class="label mx-2" for="ke_dtc">KE DTC</label>
+                            <input name="ke_dtc" type="text" placeholder="KE DTC">
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <div class="col">
+                        <label class="label" for="unit_no">Unit Number</label>
+                        <input name="unit_no" type="text" placeholder="Unit Number ">
+                    </div>
+                    <div class="col text-center">
+                        <label for="datetime" class="label">Date</label>
+                        <input class="datetime" name="datetime" type="date">
+                    </div>
+                    
+                </div>
+                <div class="row my-2">
+                    <div class="row my-4 ">
+                        <div class="col text-center">
+                            <label for="scdedule_at" class="label">SCHEDULE AT</label>
+                            <!-- <input name="schedule_at" type="text" > -->
+                            <select name="schedule_at" name="">
+                                {% for rake in schedule_at %}
+                                <option value="{{rake.0}}">{{rake.1}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col text-center">
+                            <label for="shift" class="label">SHIFT</label>
+                            <!-- <input name="shift" type="text" > -->
+                            <select name="shift" name="">
+                                {% for rake in shift %}
+                                <option value="{{rake.0}}">{{rake.1}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col text-center">
+                            <label for="ia" class="label">IA</label>
+                            <!-- <input name="ia" type="text" > -->
+                            <select name="ia">
+                                {% for rake in ia %}
+                                <option value="{{rake.0}}">{{rake.1}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row my-2 ">
+                        <div class="col text-center">
+                            <label for="ti" class="label">TI</label>
+                            <!-- <input name="ti" type="text" > -->
+                            <select name="ti">
+                                {% for rake in ti %}
+                                <option value="{{rake.0}}">{{rake.1}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col text-center">
+                            <label for="ic_quaterly" class="label">IC SIEMENS</label>
+                            <select name="ic_quaterly">
+                                {% for rake in ic_quaterly %}
+                                <option value="{{rake.0}}">{{rake.1}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col text-center">
+                            <label for="ust" class="label">UST</label>
+                            <select name="ust">
+                                {% for rake in ust %}
+                                <option value="{{rake.0}}">{{rake.1}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row my-2 ">
+                        <div class="col text-center">
+                            <div class="washing">
+                                <label for="washing" class="label"> WASHING</label>
+                                <input name="washing" type="date">
+                            </div>
+                        </div>
+                        <div class="col text-center">
+                            <div class="mopping ">
+                                <label for="mopping" class="label">MOPPING</label>
+                                <input name="mopping" type="date">
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+                <div class="row my-4 mx-2 text-center">
+                    <div class="custom-file ">
+                        <input type="file" class="custom-file-input" name="customFile">
+                    </div>
+                </div>
+                <div class="row">
+                    <button name="submit" type="submit" class="btn-secondery">Confirm</button>
+                </div>
+        </div>
+        
+    </div>
+    <!-- <button type="submit" class="btn btn-primary">Upload PDFs</button> -->
+    </form>
+    </div>
+    </div>
+
+
+</body>
+
+{% endblock body%}

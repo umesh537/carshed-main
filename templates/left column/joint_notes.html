@@ -1,0 +1,83 @@
+{% extends 'base.html'   %}
+
+{% block title %}login{% endblock title%}
+{% block  body %} this is editmfile body
+
+
+<head>
+    <style>
+        /* body {
+            background-image: url(/static/images/mumbailocal.jpg);
+        } */
+    </style>
+    <link rel="stylesheet" href="/static/css/table/tables.css">
+    <link rel="stylesheet" href="/static/css/table/upload.css">
+</head>
+
+<body>
+    <h1 class="bg-light text-dark text-center">This is the Joint notes</h1>
+    <div class="table">
+        <div class="row">
+            <div class="col-lg-6">
+                <h1>table 2021</h1>
+                <div class="table_responsive mt-5 mb-5">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Supervisor</th>
+                                <th>Download</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for file in pdfs %}
+                            <tr>
+                                <td>{{ file.title}}</td>
+                                <td>{{ file.supervisor}}</td>
+                                <td>
+                                    <a href="{{ file.pdf.url }}" class="btn btn-outline-success" target="_blank">
+                                        Download PDF
+                                    </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h1>table 2022</h1>
+                <div class="table_responsive mt-5 mb-5">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Supervisor</th>
+                                <th>Download</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for file in pdfs2 %}
+                            <tr>
+                                <td>{{ file.title}}</td>
+                                <td>{{ file.supervisor}}</td>
+                                <td>
+                                    <a href="{{ file.pdf.url }}" class="btn btn-outline-success" target="_blank">
+                                        Download PDF
+                                    </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="/static/js/upload.js"></script>
+
+</body>
+
+{% endblock body%}

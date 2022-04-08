@@ -1,0 +1,72 @@
+{% extends 'base.html'   %}
+
+{% block title %}PDF LIST{% endblock title%}
+{% block  body %}
+
+
+<head>
+    <style>
+        /* body {
+            background-image: url(/static/images/mumbailocal.jpg);
+        }   */
+    </style>
+    <link rel="stylesheet" href="/static/css/table/tables.css">
+    <link rel="stylesheet" href="/static/css/table/upload.css">
+    
+</head>
+
+<body>
+
+    <h1 class="bg-light text-dark text-center  mt-4">This is the pdf list </h1>
+    <!-- <p class="m-4">
+        <a href="{% url 'upload_pdf' %}" class="btn btn-primary ">Upload PDF</a>
+    </p> -->
+    <div class="upload">
+        <div class="box-input">
+        <i class="fas fa-fighter-jet"></i>
+       <br>
+        <i class="fas fa-cloud"></i>
+        <label for="file"><strong>Click Here & Choose a file</strong>
+            <span class="box-dragndrop"> or drag it here</span>.</label>
+        <!-- <a href="{% url 'upload_pdf' %}" class="btn btn-primary ">Upload PDF</a> -->
+        <button type="submit" class="button">
+            <a href="{% url 'acretro_upload' %}" class="button">
+            Upload PDF</a></button>
+        </div>  
+    </div>
+    
+    <div class="table_responsive mt-5 mb-5">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Supervisor</th>
+                    <th>Download</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for file in data %}
+                <tr>
+                    <td>{{ file.title}}</td>
+                    <td>{{ file.supervisor}}</td>
+                    <td>
+                        <a href="{{ file.pdf.url }}" class="btn btn-outline-success" target="_blank">
+                            Download PDF
+                        </a>
+                    </td>
+                    <td>
+                        <form method="post" action="{% url 'acretro_delete' file.pk %}">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-outline-danger">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script src="/static/js/upload.js"></script>
+</body>
+
+{% endblock body%}

@@ -1,0 +1,65 @@
+{% extends 'base.html'   %}
+
+{% block title %}login{% endblock title%}
+{% block  body %} this is editmfile body 
+
+
+<head>
+    <style>
+        /* body {
+            background-image: url(/static/images/mumbailocal.jpg);
+        } */
+    </style>
+    <link rel="stylesheet" href="/static/css/table/upload.css">
+    <link rel="stylesheet" href="/static/css/table/tables.css">
+
+</head>
+
+<body>
+    <h1 class="bg-light text-dark text-center">This is the EMEMO </h1>
+    <div class="upload">
+        <div class="box-input">
+        <i class="fas fa-fighter-jet"></i>
+       <br>
+        <i class="fas fa-cloud"></i>
+        <label for="file"><strong>Click Here & Choose a file</strong>
+            <span class="box-dragndrop"> or drag it here</span>.</label>
+        <!-- <a href="{% url 'upload_pdf' %}" class="btn btn-primary ">Upload PDF</a> -->
+        <button type="submit" class="button">
+            <a href="{% url 'ememo_upload' %}" class="button">
+            Upload PDF</a></button>
+        </div>  
+    </div>
+
+    <div class="table_responsive mt-5 mb-5">
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    <!-- <th>ID</th> -->
+                    <th>UNIT NUMBER</th>
+                    <th>COACH NUMBER</th>
+                    <th>TRAIN NUMBER</th>
+                    <th>REPORT BY</th>
+                    <th>REPORT SIGNEE</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for file in data %}
+                <tr>
+                    <!-- <td>{{ file.id}}</td> -->
+                    <td>{{ file.unit_no}}</td>
+                    <td>{{ file.coach_no}}</td>
+                    <td>{{ file.train_no}}</td>   
+                    <td>{{ file.report_by}}</td>   
+                    <td>{{ file.report_signee}}</td>   
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- <script src="/static/js/upload.js"></script> -->
+</body>
+
+{% endblock body%}
+

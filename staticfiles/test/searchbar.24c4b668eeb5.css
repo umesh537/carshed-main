@@ -1,0 +1,110 @@
+.first-nav{
+  margin-top: -90px;
+  margin-bottom: -90px;
+  }
+  
+  /* cr logo section starts here  */
+.cr-logo{
+  height:22vh;
+  margin-left: 10px;
+  margin-top: -22px;
+
+}
+  .nav-icons{
+    margin-left: 40px;
+  }
+.search-container{
+    margin-left: 20px;
+   margin-bottom: 50px;
+}
+
+.home-btn{
+
+  margin-left: 80px;
+  margin-bottom: 129px;
+  margin-top: 30px;
+ padding-bottom: 9px;
+ padding-top: 9px;
+}
+
+.nav-icons{
+    margin-left: 20px;
+  color: whitesmoke;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  margin-top: 120px;
+     font-size: 20px;
+     margin-bottom: 52px;
+    
+}
+
+.form-control{
+  width: 55vw;
+  margin-left: 20px;
+}
+
+.search-btn{
+  margin-bottom: 50px;
+  margin-left: 5px;
+}
+
+.icon-transform:hover {
+  transform: translateY(-4px);
+  transition: 0.3s;
+ 
+}
+
+.cr-icon{
+ color: black;
+}
+
+.cr-icon:hover{
+color: whitesmoke;
+}
+
+
+.home-icon{
+ color: #0dcaf0;
+}
+.home-icon:hover{
+color: whitesmoke;
+}
+
+.envelope-icon{
+color: #0d6efd;
+}
+.envelope-icon:hover{
+ color: whitesmoke;
+}
+
+.bell-icon{
+ color: #6c757d;
+}
+.bell-icon:hover{
+ color: whitesmoke;
+}
+
+.setting-icon{
+ color: #212529;
+}
+
+.setting-icon:hover{
+ color: whitesmoke;
+}
+
+.fa-sign-out{
+color: #dc3545; 
+}
+.fa-sign-out:hover{
+ color: whitesmoke;
+}
+
+/* .nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  justify-content: space-between;
+} */

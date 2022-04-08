@@ -1,0 +1,96 @@
+{% extends 'base.html'   %}
+
+{% block title %}Schedule Rake{% endblock title%}
+{% block  body %}
+
+
+<head>
+    <!-- <style>
+         body {
+            background-image: url(/static/images/mumbailocal.jpg);
+        } 
+    </style> -->
+    <link rel="stylesheet" href="/static/css/table/tables.css">
+    <link rel="stylesheet" href="/static/css/table/upload.css">
+    
+</head>
+
+<body>
+    <h1 class="bg-light text-dark text-center">This is the Excel Data</h1>
+    <div class="add_button text-center my-4">
+        <a href="{% url 'siemensdata' %}" class="btn btn-success mx-2" role="button">
+            Siemens Data
+        </a>
+        <a href="{% url 'rcfmemu_data' %}" class="btn btn-success mx-2" role="button">
+            RCF Memu Data
+        </a>
+        <a href="{% url 'btmemu_data' %}" class="btn btn-success mx-2" role="button">
+            BT Memu Data
+        </a>
+        <a href="{% url 'acretro_data' %}" class="btn btn-success mx-2" role="button">
+            AC Retro Data
+        </a>
+    </div>
+    <div class="table_responsive mt-5 mb-5">
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Rake Type</th>
+                    <th>Coach Number</th>
+                    <th>Commision Date</th>
+                    <th>Age in Years</th>
+                    <th>Make</th>
+                    <th>Life Left</th>
+                    <th>Latest POH Date</th>
+                    <th>Edit Data</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for file in data %}
+                <tr>
+                    <td>{{ file.id}}</td>
+                    <td>{{ file.Rake_Type}}</td>
+                    <td>{{ file.Coach_No}}</td>
+                    <td>{{ file.Comm_Date}}</td>
+                    <td>{{ file.Age_in_Yrs}}</td>
+                    <td>{{ file.Make}}</td>
+                    <td>{{ file.Life_Left}}</td>
+                    <td>{{ file.Latest_POH_Date}}</td>
+
+                    {% if header|lower == "siemensdata" %}
+                    <td>
+                        <a href="{% url 'edit_siemens' file.pk %}" class="btn btn-success btn-sm" 
+                        role="button" aria-pressed="true">Edit</a>
+                    </td>
+                    {% elif header|lower == "rcfmemu_data" %}
+                    <td>
+                        <a href="{% url 'edit_rcfmemu' file.pk %}" class="btn btn-success btn-sm" 
+                        role="button" aria-pressed="true">Edit</a>
+                    </td>
+                    {% elif header|lower == "btmemu_data" %}
+                    <td>
+                        <a href="{% url 'edit_btmemu' file.pk %}" class="btn btn-success btn-sm" 
+                        role="button" aria-pressed="true">Edit</a>
+                    </td>
+                    {% else %}
+                    <td>
+                        <a href="{% url 'edit_acretro' file.pk %}" class="btn btn-success btn-sm" 
+                        role="button" aria-pressed="true">Edit</a>
+                    </td>
+                    {% endif %}
+
+
+                </tr>
+
+
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script src="/static/js/upload.js"></script>
+    <!-- <link rel="stylesheet" href="/static/css/table/tables.css"> -->
+</body>
+
+{% endblock body%}

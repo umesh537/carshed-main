@@ -1,0 +1,31 @@
+.welcome-header{
+    margin-left: 160px;
+    margin-right: 160px;
+     margin-top: 10px;
+     size: 50%;
+     color: whitesmoke;
+     border: 2px solid whitesmoke;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: rgb(15 12 12 / 74%);
+     border-radius: 7px;
+     flex-wrap: wrap;
+     padding: 8px 6px;
+   }
+
+   .emu-icon{
+    font-size: 25px;
+    margin-right: 10px;
+   }
+   .login-page-datetime{
+     width: 240px;
+     /* width: 100px; */
+    margin-left:30px;
+    background-color: rgb(15 12 12 / 74%);
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+     border-radius: 5px;
+     display: flex;
+     justify-content: center;
+  }

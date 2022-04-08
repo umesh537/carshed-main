@@ -1,0 +1,44 @@
+{% extends 'base.html'   %}
+
+
+{% load crispy_forms_tags %}
+
+{% block title %}KCS Upload File{% endblock title%}
+{% block  body %}  
+
+<head>
+    <style>
+         /* body {
+            background-image: url(/static/images/mumbailocal.jpg);
+        }  */
+    </style>
+    <!-- <link rel="stylesheet" href="/static/css/table/form.css"> -->
+</head>
+
+<body>
+    <h1 class="bg-light text-dark text-center">This is the upload pdf</h1>
+    <div class="wrapper">
+        <div class="container d-flex justify-content-center align-item-center">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <h2>editing the data</h2>
+                {% for field in form %}
+                <div class="form-group row">
+                    <label for="id_{{ field.name}}" class="col-form-label">
+                        {{ field.label}}
+                    </label>
+                    <div class="col">
+                        {{ field }}
+                    </div>
+                </div>
+                {% endfor %}
+                <button type="submit" class="btn btn-primary">Edit</button>
+            </form>
+        </div>
+    </div>
+    
+
+</body>
+
+{% endblock body%}
+

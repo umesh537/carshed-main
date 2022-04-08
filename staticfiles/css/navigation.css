@@ -1,0 +1,544 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, .55);
+    font-size: 15px;
+
+}
+
+.fa-cog {
+    margin-right: 15px;
+
+}
+
+.fa-bell {
+    margin-right: 15px;
+
+}
+
+.fa-envelope {
+    margin-right: 15px;
+
+}
+
+.navbar {
+    background-color: #933ded;
+    color: whitesmoke;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: whitesmoke(0, 0, 0, .55);
+    font-size: 15px;
+    color: whitesmoke;
+}
+
+.nav-link {
+    color: whitesmoke;
+}
+
+.navbar-light .navbar-toggler {
+    background-color: whitesmoke;
+    color: rgb(255 255 255);
+    border-color: rgb(255 253 253);
+}
+
+.dropdown-item {
+    font-size: 14px;
+    background-color: #933ded;
+}
+
+a:visited {
+    color: black;
+}
+
+/* mouse over link */
+a:hover {
+    color: whitesmoke;
+}
+
+.fa-home {
+    margin-top: 5px;
+    margin-right: 10px;
+    font-size: 30px;
+}
+
+.fa-subway {
+    margin-top: 5px;
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+.nav-icons {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    margin-top: 10px;
+    margin-left: -35px;
+    /* margin-right: 10px; */
+    font-size: 20px;
+    left: 40px;
+    margin-bottom: 30px;
+}
+
+.fa-envelope:before {
+    content: "\f0e0";
+    margin-left: 20px;
+
+}
+
+.fa-envelope {
+    margin-top: 6px;
+    margin-right: 15px;
+    margin-left: 102px;
+}
+
+.fa-bell {
+    margin-top: 6px;
+    margin-right: 15px;
+}
+
+.fa-cog {
+    margin-top: 6px;
+    margin-right: 15px;
+}
+
+.form-control {
+    width: 600px;
+    margin-left: 150px;
+}
+
+/* upper navigation menu responsive  */
+@media screen and (max-width: 1240px)and (min-width:1156px) {
+    .nav-icons {
+        margin-left: -83px;
+    }
+
+    #search {
+        display: flex;
+        flex-shrink: 6;
+    }
+
+    .form-control {
+        margin-left: 65px;
+    }
+
+    .fa-envelope:before {
+        content: "\f0e0";
+        margin-left: -8px;
+    }
+}
+
+@media screen and (max-width: 1160px)and (min-width:1034px) {
+
+    /* .form-control {
+        width: 600px;
+        margin-left: 68px;
+    } */
+    .navbar-light .navbar-nav .nav-link {
+        font-size: 15px;
+        color: whitesmoke;
+    }
+
+    .form-control {
+        margin-left: 64px;
+    }
+
+    .nav-icons {
+        margin-left: -133px;
+    }
+
+
+    .fa-envelope:before {
+        content: "\f0e0";
+        margin-left: -8px;
+    }
+
+    #search {
+        display: flex;
+        flex-shrink: 6;
+    }
+
+    .dropdown-item {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 1034px)and (min-width:1019px) {
+    .fa-subway:before {
+        margin-left: -27px;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        color: whitesmoke(0, 0, 0, .55);
+        font-size: 12px;
+        color: whitesmoke;
+    }
+
+    .form-control {
+
+        margin-left: 79px;
+    }
+
+    .dropdown-item {
+        font-size: 9px;
+        color: whitesmoke;
+    }
+
+    .nav-icons {
+        margin-left: -138px;
+    }
+}
+
+@media screen and (min-width:1019px) {
+    .fa-home:before {
+        content: "\f015";
+        margin-left: 2px;
+        font-size: 30px;
+    }
+
+    .fa-subway:before {
+        content: "\f239";
+        font-size: 28px;
+        margin-left: -31px;
+    }
+}
+
+@media screen and (max-width: 1019px)and (min-width:768px) {
+
+    /* .nav-icons {
+        margin-left: -242px;
+    } */
+    .form-control {
+        width: 560px;
+        margin-left: 6px;
+    }
+
+    .nav-icons {
+        margin-left: -230px;
+    }
+
+    .navbar {
+        width: 115%;
+    }
+
+    .fa-envelope:before {
+        margin-left: 91px;
+    }
+
+    .fa-subway:before {
+        margin-left: -29px;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        color: whitesmoke(0, 0, 0, .55);
+        font-size: 14px;
+        color: whitesmoke;
+    }
+
+    .fa-subway:before {
+        margin-left: -34px;
+    }
+}
+
+@media screen and (max-width: 900px)and (min-width:768px) {
+    .form-control {
+        width: 464px;
+        margin-left: -6px;
+    }
+}
+
+@media screen and (max-width: 800px)and (min-width:760px) {
+    .form-control {
+        width: 450px;
+        margin-left: -6px;
+    }
+}
+
+@media screen and (max-width: 760px)and (min-width:600px) {
+    .form-control {
+        width: 437px;
+        margin-left: -6px;
+    }
+
+    @media screen and (max-width: 725px)and (min-width:600px) {
+
+        .form-control {
+            width: 391px;
+            margin-left: -6px;
+        }
+
+        .fa-home:before {
+            content: "\f015";
+            margin-left: -23px;
+        }
+    }
+}
+
+@media screen and (max-width: 769px)and (min-width:742px) {
+
+    .fa-home:before {
+        content: "\f015";
+        margin-left: -32px;
+        font-size: 24px;
+    }
+
+    .fa-subway:before {
+        content: "\f239";
+        margin-left: -38px;
+        font-size: 24px;
+    }
+
+    .form-control {
+        width: 253px;
+        margin-left: 1px;
+    }
+
+    .fa-envelope:before {
+        content: "\f0e0";
+        margin-left: 8px;
+    }
+
+    .nav-icons {
+        margin-left: -106px;
+    }
+
+}
+
+@media screen and (max-width: 743px)and (min-width:500px) {
+    .fa-subway:before {
+        margin-left: -37px;
+    }
+
+    .fa-home:before {
+        content: "\f015";
+        margin-left: -17px;
+    }
+
+    .nav-icons {
+        margin-left: -164px;
+
+    }
+
+    /* .form-control {
+        width: 376px;
+        margin-left: -6px;
+    } */
+    .form-control {
+        width: 310px;
+        margin-left: -6px;
+    }
+}
+
+@media screen and (max-width: 670px)and (min-width:614px) {
+    .form-control {
+        width: 320px;
+        margin-left: -6px;
+    }
+}
+
+@media screen and (max-width: 614px)and (min-width:546px) {
+    .form-control {
+        width: 250px;
+        margin-left: -6px;
+    }
+}
+
+@media screen and (max-width: 546px)and (min-width:502px) {
+    .form-control {
+        width: 200px;
+        margin-left: -6px;
+    }
+}
+
+@media screen and (max-width: 500px)and (min-width:488px) {
+    .form-control {
+        width: 176px;
+        margin-left: -2px;
+    }
+
+    .fa-subway:before {
+        content: "\f239";
+        margin-left: -38px;
+    }
+
+    .fa-home:before {
+
+        margin-left: -21px;
+    }
+
+    .nav-icons {
+        margin-left: -155px;
+    }
+}
+
+@media screen and (max-width: 488px)and (min-width:418px) {
+    .fa-subway:before {
+
+        margin-left: -41px;
+    }
+
+    .fa-home:before {
+
+        margin-left: -23px;
+    }
+
+    .form-control {
+        font-size: 15px;
+        width: 110px;
+        margin-left: -1px;
+        font-size: 12px;
+    }
+
+    .nav-icons {
+
+        margin-left: -148px;
+
+    }
+}
+
+@media screen and (max-width: 418px) and (min-width:405px) {
+    .form-control {
+        width: 314px;
+        margin-left: -11px;
+    }
+
+    .fa-subway:before {
+        content: "\f239";
+        margin-left: -45px;
+    }
+
+    .fa-home:before {
+        content: "\f015";
+        margin-left: -35px;
+    }
+
+    .form-control {
+        font-size: 12px;
+        width: 114px;
+        margin-left: 6px;
+    }
+
+    .nav-icons {
+        margin-left: -158px;
+    }
+
+}
+
+@media screen and (max-width: 418px) and (min-width:380px) {
+    .fa-subway:before {
+        content: "\f239";
+        margin-left: -36px;
+        font-size: 23px;
+    }
+
+    .fa-home:before {
+        font-size: 26px;
+        margin-left: -28px;
+        content: "\f015";
+    }
+
+    .form-control {
+        width: 110px;
+        margin-left: -9px;
+        font-size: 11px;
+    }
+
+    .nav-icons {
+        margin-left: -167px;
+    }
+
+}
+
+@media screen and (max-width: 380px) and (min-width:374px) {
+    .form-control {
+        width: 191px;
+        margin-left: -1px;
+    }
+
+    .fa-subway:before {
+        content: "\f239";
+        margin-left: -37px;
+        font-size: 22px;
+    }
+
+    .fa-home:before {
+        content: "\f015";
+        font-size: 24px;
+        margin-left: -30px;
+    }
+
+    .form-control {
+        width: 100px;
+        margin-left: -1px;
+        font-size: 12px;
+    }
+
+    .nav-icons {
+        margin-left: -168px;
+    }
+}
+
+@media screen and (max-width: 374px) and (min-width:364px) {
+    .form-control {
+        width: 93px;
+        margin-left: -14px;
+        font-size: 11px;
+    }
+
+    .fa-subway:before {
+        font-size: 21px;
+        content: "\f239";
+        margin-left: -42px;
+    }
+
+    .fa-home:before {
+        content: "\f015";
+        font-size: 24px;
+        margin-left: -36px;
+    }
+
+    .form-control {
+        width: 106px;
+        margin-left: -14px;
+        font-size: 12px;
+    }
+
+    .nav-icons {
+        margin-left: -165px;
+    }
+}
+
+@media screen and (max-width: 364px) and (min-width:300px) {
+    .form-control {
+        width: 90px;
+        margin-left: -13px;
+        font-size: 11px;
+    }
+
+    .fa-subway:before {
+        content: "\f239";
+        font-size: 22px;
+        margin-left: -42px;
+    }
+
+    .fa-home:before {
+        content: "\f015";
+        margin-left: -33px;
+        font-size: 25px;
+    }
+
+    .nav-icons {
+        margin-left: -165px;
+    }
+}
+
+
+

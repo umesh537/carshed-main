@@ -1,0 +1,289 @@
+{% extends 'base.html'   %}
+
+{% block title %}login{% endblock title%}
+{% block  body %} this is add folder body
+
+
+
+<head>
+    <!-- <style>
+        body {
+            background-image: url(/static/images/mumbailocal.jpg);
+        }
+    </style> -->
+    <link rel="stylesheet" href="/static/css/report-form.css">
+</head>
+
+<body>
+    <!-- <h1 class="bg-light text-dark text-center">This is the Report Form</h1> -->
+    <div class="container ">
+        <main class="form-border mt-5">
+            <div class="form-heading mt-5">
+                <!-- <img class="d-block mx-auto mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
+                <b class="centeral-railway-heading ">Centeral Railway </b>
+                <b class="carshed-heading">Kalwa Carshed </b>
+                <!-- <span class="login-page-datetime" id="ct7"></span> -->
+            </div>
+
+            <hr class="col-md-7 col-lg-8 d-block mx-auto mb-4">
+            <div class="col-md-7 col-lg-8 d-block mx-auto mb-4">
+                <!-- <h4 class="mb-3">Billing address</h4> -->
+                <form class="needs-validation" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="row g-3">
+                        <div class="col-sm-3">
+                            <label for="unitno" class="form-label"> Unit No :-</label>
+                            <input type="text" class="form-control1" id="unitno" placeholder=" Unit No " name="unit_no"
+                                required>
+                            <div class="invalid-feedback">
+                                Valid Unit Number is required.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="coachno" class="form-label">Coach No :-</label>
+                            <input type="text" class="form-control2" id="coachno" placeholder="Coach Number"
+                                name="coach_no" required>
+                            <div class="invalid-feedback">
+                                Valid Coach Number is required.
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="lineno" class="form-label ml-6">Line No :-</label>
+                            <input type="text" class="form-control3" id="lineno" placeholder="Line Number"
+                                name="line_no" required>
+                            <div class="invalid-feedback">
+                                Valid Line Number is required.
+                            </div>
+                        </div>
+                        <!-- <div class="col-sm-3">
+                            <label for="STBthrough" class="form-label">STB Through :- </label>
+                            <input type="text" class="form-control" id="STBthrough" placeholder="STB Through" name=""
+                                required>
+                            <div class="invalid-feedback">
+                                Valid STB Through is required.
+                            </div>
+                        </div> -->
+                        <div class="col-12 mb-4">
+                            <label for="RakeInformation" class="form-label">Rake Information </label>
+                            <input type="text" class="form-controlxy ml-2" id="RakeInformation"
+                                placeholder="Rake Information" name="rake_formation">
+                        </div>
+                        <hr>
+                        <h4>Schdule Dates</h4>
+                        <div class="col-4">
+                            <label for="POH" class="form-label">POH :- </label>
+                            <div class="input-group has-validation">
+                                <input type="date" class="form-control" id="POH" name="poh">
+                                <!-- <div class="invalid-feedback">
+                                    Valid date is required.
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <label for="IA" class="form-label">IA :-</label>
+                            <div class="input-group has-validation">
+                                <input type="date" class="form-control" id="IA" name="IA">
+                                <!-- <div class="invalid-feedback">
+                                    Valid date is required.
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <label for="TI" class="form-label">TI :-</label>
+                            <div class="input-group has-validation">
+                                <input type="date" class="form-control" id="TI" name="TI">
+                                <!-- <div class="invalid-feedback">
+                                    Valid date is required.
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <label for="W" class="form-label">W :-</label>
+                            <div class="input-group has-validation">
+                                <input type="date" class="form-control" id="W" name="W">
+                                <!-- <div class="invalid-feedback">
+                                    Valid date is required.
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <label for="M" class="form-label">M :-</label>
+                            <div class="input-group has-validation">
+                                <input type="date" class="form-control" id="M" name="M">
+                                <div class="invalid-feedback">
+                                    Valid date is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <label for="IC" class="form-label">IC :-</label>
+                            <div class="input-group has-validation">
+                                <input type="date" class="form-control" id="IC" name="IC">
+                                <div class="invalid-feedback">
+                                    Valid date is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <label for="IC" class="form-label">UST :-</label>
+                            <div class="input-group has-validation">
+                                <input type="date" class="form-control" id="UST" name="UST">
+                                <div class="invalid-feedback">
+                                    Valid date is required.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-4">
+                            <label for="Failure" class="form-label">100 Days OF Failure :-</label>
+                            <div class="input-group has-validation">
+                                <input type="date" class="form-control" id="Failure" required>
+                                <div class="invalid-feedback">
+                                    Valid date is required.
+                                </div>
+                            </div>
+                        </div> -->
+                        <hr>
+                        <div class="col-md-5">
+                            <label for="country" class="form-label">Defect Report</label>
+                            <select class="form-select" id="country" name="defects_reported">
+                                <option>Line Report</option>
+                                <option>Shed Report</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a Report Type.
+                            </div>
+                        </div>
+                        <h6>1) OPTED FOR LINE REPORT ,</h6>
+                        <div class="row g-2">
+                            <div class="wrap row g-2">
+                                <div class="col-sm-3 ">
+                                    <label for="trainno" class="form-label"> Train No :-</label>
+                                    <input type="text" class="form-controlx" id="trainno" placeholder=" Train number "
+                                        name="train_no">
+                                    <div class="invalid-feedback">
+                                        Please enter a valid Details
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 form-controlxy">
+                                    <label for="report" class="form-label">Report By :-</label>
+                                    <input type="text" class="form-controlxy1" id="report" placeholder="Reported By"
+                                        name="report_by">
+                                    <div class="invalid-feedback">
+                                        Please enter a valid Details
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 form-controlxy">
+                                    <label for="defect" class="form-label">Nature of Defects :-</label>
+                                    <input type="text" class="form-controlxy2" id="defect"
+                                        placeholder="Nature of Defects" name="nature_of_defects">
+                                    <div class="invalid-feedback">
+                                        Please enter a valid Details
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-sm-3 form-controlxy">
+                                    <label for="repercussion" class="form-label"> Repercussion :- </label>
+                                    <input type="text" class="form-controlxy3" id="epercussion"
+                                        placeholder="Repercussion" name="repercussion">
+                                    <div class="invalid-feedback">
+                                        Please enter a valid Details
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="placeoffailure" class="form-label ml-2">Place Of Failure </label>
+                                    <input type="text" class="form-controlxy4" id="placeoffailure"
+                                        placeholder="Place Of Failure" name="place_of_failure">
+                                    <div class="invalid-feedback">
+                                        Please enter valid Details
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="failurereport" class="form-label">Failure Report (FR)</label>
+                                <textarea name="failure_report" class="form-control" id="failurereport"
+                                    rows="3"></textarea>
+                                <div class="invalid-feedback">
+                                    Please enter valid Details
+                                </div>
+                                <div class="mt-2 ml-4 signee align-content-right d-flex justify-content-end">
+                                    <label for="RakeInformation" class="form-label">Signee </label>
+                                    <input type="text" class="form-controlxy ml-2" id="RakeInformation"
+                                        placeholder="enter Your Name" name="report_signee">
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="mb-3">
+                                <label for="investigationreport" class="form-label">Detail Action /
+                                    Investigation</label>
+                                <textarea name="investigation" name="investigation" class="form-control"
+                                    id="investigationreport" rows="3"></textarea>
+                                <div class="invalid-feedback">
+                                    Please enter valid Details
+                                </div>
+                                <div class="mt-2 ml-4 signee align-content-right d-flex justify-content-end">
+                                    <label for="RakeInformation" class="form-label">Signee </label>
+                                    <input type="text" class="form-controlxy ml-2" id="RakeInformation"
+                                        placeholder="Enter your Name" name="investigation_signee">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 col-sm-5">
+                                <label for="formFile" class="form-label">Upload Image Here</label>
+                                <input name="image" class="form-control" type="file">
+                                <div class="invalid-feedback">
+                                    Please enter valid Details
+                                </div>
+
+                            </div>
+
+                            <div class="report">
+
+                                <ul class="list-inline">
+                                    Report :-
+                                    <li class="list-inline-item"><a class="link-danger" href="#">Attend</a></li> /
+                                    <li class="list-inline-item"><a class="link-danger" href="#">Pending </a></li> /
+                                    <li class="list-inline-item"><a class="link-danger" href="#">Work Under Progress</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <hr>
+
+                            <div class="col-md-6">
+                                <label for="remarks" class="form-label">Remarks :-</label>
+                                <input type="text" name="remarks" class="form-control" id="remarks"
+                                    placeholder="Remarks" required>
+
+                                <div class="invalid-feedback">
+                                    Please enter valid Details
+                                </div>
+
+                            </div>
+
+                            <!-- <div class="col-md-5">
+                                <label for="return-time" class="form-label">Memo Return Time :-</label>
+                                <input type="datetime-local" class="form-control" id="return-time" required>
+                                <div class="invalid-feedback">
+                                    Please enter valid Details
+                                </div>
+                            </div> -->
+                        </div>
+
+                        <hr class="my-4">
+
+                        <button class="w-100 btn  btn-lg buttoncolor" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="/static/js/autodate.js"></script>
+</body>
+
+
+
+{% endblock body%}

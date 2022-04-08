@@ -1,0 +1,44 @@
+/* Start About Area */ 
+
+.About .about-area{
+    padding: 8rem 5rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+}
+.site-main .about-area .about-title{
+    padding-left: 6rem;
+}
+.container{
+    margin-right: 20px;
+}
+.site-main .about-area .about-title h2 > span{
+    display: block;
+    font: normal bold 49px/ 60px var(--roboto);
+    letter-spacing: 21px;
+}
+
+.site-main .about-area .about-title .paragraph > p{
+    padding: .4rem 0;
+}
+
+.about-image1{
+    position: relative;
+    height: 40vh;
+    right:  20px;
+   bottom:  5px;
+}
+.about-image2{
+    position: relative;
+    /* height: 50vh; */
+    border-radius: 7px;
+    justify-content: center;
+
+
+}
+
+/* .about-title{
+
+    margin-top: -90px;
+} */
+/* End About Area */ 

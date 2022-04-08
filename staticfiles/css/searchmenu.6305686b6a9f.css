@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins',sans-serif;
+}
+nav{
+   
+   display: flex;
+   width: 100%;
+   /* background: #933ded; */
+   position: relative;
+   justify-content: space-between;
+   text-align: center;
+   /* padding: 15px 30px; */
+}
+nav .cr-icon{
+   font-size: 35px;
+   font-weight: 800;
+   color: #fff;
+   cursor: pointer;
+   border: 2px;
+}
+nav ul{
+   display: flex;
+   list-style: none;
+   margin: auto 0;
+}
+nav ul li{
+   margin: 0 2px;
+}
+nav ul li a{
+   color: #fff;
+   font-size: 20px;
+   text-decoration: none;
+   text-transform: capitalize;
+   letter-spacing: 1px;
+   padding: 5px 10px;
+}
+/* nav ul li:hover a{
+   background: #fff;
+   color: #0a5071;
+} */
+nav .search_box{
+   display: flex;
+   margin: auto 0;
+   height: 35px;
+   line-height: 35px;
+}
+nav .search_box input{
+   border: none;
+   outline: none;
+   background: #fff;
+   height: 100%;
+   padding: 0 10px;
+   font-size: 20px;
+   width: 520px;
+   border: 2px solid #933ded;
+   border-radius: 20px;
+}
+nav .search_box span{
+   color: whitesmoke;
+   font-size: 20px;
+   background: #933ded;
+   height: 100%;
+   padding: 8px;
+   position: relative;
+   cursor: pointer;
+   z-index: 1;
+   border-radius: 20px;
+}
+nav .search_box span:hover{
+   color: #fff;
+}
+nav .search_box span::after{
+ 
+border-radius: 50%;
+   height: 100%;
+   width: 0%;
+   content: '';
+   background: red;
+
+   position: absolute;
+   top: 0;
+   right: 0;
+   z-index: -1;
+   transition: 0.3s;
+}
+nav .search_box span:hover::after{
+   width: 100%;
+}
+nav .bar{
+   position: relative;
+   margin: auto;
+   display: none;
+}
+nav .bar span{
+   position: absolute;
+   color: #933ded;
+   font-size: 35px;
+}
+input[type="checkbox"]{
+   -webkit-appearance: none;
+   display: none;
+}
+@media screen and (max-width: 1200px){
+   nav{
+      display: block;
+      padding: 0;
+   }
+   nav .cr-icon{
+      display: inline-block;
+      padding: 15px 30px;
+   }
+   nav .search_box{
+      width: 100%;
+      display: inline-flex;
+      justify-content: center;
+      margin-bottom: 15px;
+   }
+   nav .search_box input{
+      width: 74%;
+   }
+   nav ul{
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      height: 0;
+      visibility: hidden;
+      transition: 0.3s;
+   }
+   nav ul li{
+      text-align: center;
+      transition: 0.3s 0.1s all;
+      opacity: 0;
+   }
+   nav ul li a{
+      color: #000;
+      font-size: 28px;
+      padding: 25px;
+      display: block;
+   }
+   nav ul li:nth-child(1){
+      transform: translateX(-150px);
+   }
+   nav ul li:nth-child(2){
+      transform: translateX(-200px);
+   }
+   nav ul li:nth-child(3){
+      transform: translateX(-250px);
+   }
+   nav ul li:nth-child(4){
+      transform: translateX(-300px);
+   }
+   nav ul li:nth-child(5){
+      transform: translateX(-350px);
+   }
+   nav .bar{
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 80px;
+      cursor: pointer;
+   }
+   nav .bar #times{
+      display: none;
+   }
+   #check:checked ~ nav .bar #times{
+      display: block;
+   }
+   #check:checked ~ nav .bar #bars{
+      display: none;
+   }
+   #check:checked ~ nav ul{
+      visibility: visible;
+      height: 465px;
+   }
+   #check:checked ~ nav ul li:nth-child(1),
+   #check:checked ~ nav ul li:nth-child(2),
+   #check:checked ~ nav ul li:nth-child(3),
+   #check:checked ~ nav ul li:nth-child(4),
+   #check:checked ~ nav ul li:nth-child(5){
+      transform: translateX(0);
+      opacity: 1;
+   }
+} 
+
+
+
+.fa,
+.fas {
+  font-family: 'FontAwesome';
+}
+
+.social-icon {
+  color: #fff;
+  background: #933ded;
+  font-size: 1em;
+  border-radius: 50%;
+  line-height: 2.2em;
+  width: 2.1em;
+  height: 2.1em;
+  text-align: center;
+  align-items: center;
+  display: inline-block;
+}
+
+li:hover {
+  transform: translateY(-4px);
+  transition: 0.3s;
+}
+
+/* This is to center the icons on JSFiddle only. Don't use this code */
+.social-links {
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+.fa-envelope{
+   margin-top: 3px;
+   /* top: 140px; */
+}
+
+/* .fa-bars{
+  background-color: #000;
+} */
+
+
+.btn-outline-primary{
+   background-color: #933ded;
+   color: whitesmoke;
+}
+
+
+.btn-outline-primary {
+   margin-left: 267px;
+   color: #0d6efd;
+   border-color: #0d6efd;
+   margin-top: -31px;
+}
+
+.centeral-railway-heading{
+   color: black;
+   margin-bottom: -21px;
+}
+
+.heading-container{
+   margin-top: 25px;
+}
+
+.login-page-datetime{
+   width: 240px;
+   /* width: 100px; */
+  margin-left:30px;
+  background-color: rgb(15 12 12 / 74%);
+  color: whitesmoke;
+  border: 2px solid whitesmoke;
+   border-radius: 5px;
+   display: flex;
+   justify-content: center;
+}
