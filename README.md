@@ -1,6 +1,10 @@
 # Railway Carshed Django App
 
 Welcome to the Railway Carshed Django App! This app is designed to manage various aspects of a railway carshed, including user authentication, file input/output, data import/export, CRUD operations, Django forms, and database management. It utilizes MySQL for data storage and Bootstrap for a user-friendly interface.
+#
+[**Watch Youtube Video**](https://youtu.be/3_KpOIISGWg)
+#
+![img](img.jpeg)
 
 ## Features
 
